@@ -19,10 +19,6 @@
     --time-loading-3: 1.5s;
 }
 
-.no-select {
-    user-select: none;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -103,23 +99,4 @@ button {
 p {
     font-family: "Inter";
     color: var(--black);
-}
-
-@media screen and (max-width: 930px) {
-    :root {
-        /* SPACING */
-        --window-border: 5vw;
-
-        /* TIME */
-        --time-loading-1: 1.3s;
-        --time-loading-2: 1.4s;
-        --time-loading-3: 1.7s;
-    }
-    button {
-        font-size: 12px;
-        padding: 8px 12px;
-    }
-    p {
-        font-size: 12px;
-    }
 }

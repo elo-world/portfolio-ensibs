@@ -4,16 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
         <title>Convenant Planchet Elouan - Portfolio</title>
 
         <!-- Link CSS -->
         <link rel="stylesheet" href="./css/index.css" />
     </head>
     <body>
-        <section id="load">
-            <h1>Bienvenue sur mon portfolio 👋</h1>
-        </section>
         <nav>
             <a class="logo" href="#">
                 <svg
@@ -34,66 +30,18 @@
                     <li><a href="#about">À propos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="burger-menu" id="burger-menu">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-menu-icon lucide-menu"
-                    >
-                        <path d="M4 5h16" />
-                        <path d="M4 12h16" />
-                        <path d="M4 19h16" />
-                    </svg>
-                </div>
             </div>
         </nav>
-        <section class="menu" id="menu">
-            <div id="exit-menu">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-x-icon lucide-x"
-                >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </div>
-            <ul>
-                <li class="menu-button"><a href="#">Accueil</a></li>
-                <li class="menu-button"><a href="#projects">Projets</a></li>
-                <li class="menu-button"><a href="#skills">Compétences</a></li>
-                <li class="menu-button"><a href="#about">À propos</a></li>
-                <li class="menu-button"><a href="#contact">Contact</a></li>
-            </ul>
-        </section>
         <header>
             <div class="presentation">
                 <div class="image-presentation-container">
-                    <div class="image-presentation">
-                        <!--<img
-                            src="./images/header_me.JPG"
-                            alt="Photo d'Elouan Convenant Planchet durant un match de Roller Hockey"
-                        />-->
-                    </div>
+                    <div class="image-presentation"></div>
                 </div>
                 <div class="text-presentation-container">
                     <div class="text-presentation">
                         <div class="title">
-                            <h1>👋<br />Je suis <a href="#about">Elouan</a></h1>
+                            <h1 id="hey">👋</h1>
+                            <h1>Je suis <a href="#about">Elouan</a></h1>
                         </div>
                         <div class="lead">
                             <p>
@@ -108,12 +56,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="last-name-box">
-                <div class="last-name">
-                    <h1 id="last-name-1" class="no-select">CONVENANT PLANCHET —&nbsp;</h1>
-                    <h1 id="last-name-2" class="no-select">CONVENANT PLANCHET —&nbsp;</h1>
                 </div>
             </div>
         </header>
@@ -195,18 +137,21 @@
             <h3>🚧 Zone en travaux 🚧</h3>
         </section>
         <section id="skills">
-            <h3>Mes compétences</h3>
+            <div class="title">
+                <h3>Mes compétences</h3>
+            </div>
         </section>
         <section id="about">
-            <h3>À propos</h3>
+            <div class="title">
+                <h3>À propos</h3>
+            </div>
         </section>
         <section id="contact">
-            <h3>Contact</h3>
+            <div class="title">
+                <h3>Contact</h3>
+            </div>
         </section>
 
         <script src="./js/index.js"></script>
-        <script src="./js/burger-menu.js"></script>
-        <script src="./js/scroll.js"></script>
-        <script src="./js/mouse.js"></script>
     </body>
 </html>
