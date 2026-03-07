@@ -96,7 +96,7 @@ button {
     cursor: pointer;
 }
 
-p {
+ul li, p {
     font-family: "Inter";
     color: var(--black);
 }

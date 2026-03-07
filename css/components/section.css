@@ -5,33 +5,23 @@ section {
     padding: 0 var(--window-border);
 }
 
-section .title {
+/* Projects */
+
+section#projects {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+section#projects .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-section .title h3 {
+section#projects .title h2 {
     text-wrap: nowrap;
     font-size: 2vw;
-}
-
-section#zone-travaux {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section#zone-travaux h3 {
-    font-size: 5vw;
-}
-
-/* Projects */
-
-section#projects {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
 }
 
 section#projects .title p {
@@ -61,36 +51,6 @@ section#projects .projects ul {
     margin-left: 6rem;
 }
 
-section#projects .projects ul .images-container {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleY(0);
-    transition: transform 100ms, opacity 250ms;
-    z-index: -1;
-}
-
-section#projects .projects ul:hover .images-container {
-    opacity: 1;
-}
-
-section#projects .projects ul .images-container .images {
-    position: relative;
-    width: 15vw;
-    height: 15vw;
-}
-
-section#projects .projects ul .images-container .images img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: 500ms;
-}
-
 section#projects .projects ul li:last-child {
     margin-bottom: 0;
 }
@@ -106,4 +66,130 @@ section#projects .projects ul li a {
     border-bottom: 3px solid var(--primary);
     transition: 800ms;
     padding: 2rem 0;
+}
+
+section#projects .projects ul li a svg {
+    width: 5vh;
+    height: 5vh;
+    margin-left: 3rem;
+    opacity: 0;
+    transform: translateX(-30%);
+    transition: opacity 500ms, transform 500ms;
+}
+
+section#projects .projects ul li a:hover svg {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* Skills */
+section#skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#skills .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+section#skills .title h2 {
+    text-wrap: nowrap;
+    font-size: 2vw;
+}
+
+section#skills .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+section#skills .skills .softwares {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-bottom: 4rem;
+}
+
+section#skills .skills .softwares .head h3 {
+    font-family: "Inter";
+    font-size: 2vw;
+    margin-bottom: 24px;
+}
+
+section#skills .skills .softwares .softwares-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#skills .skills .softwares .softwares-images .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+section#skills .skills .softwares .softwares-images .images img {
+    height: 8vh;
+    transition: padding 500ms, transform 500ms;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+section#skills .skills .softwares .softwares-images .images img:hover {
+    padding: 0 2rem;
+    transform: scale(1.2);
+}
+
+section#skills .skills .softwares .softwares-images p {
+    max-width: 60%;
+    min-height: 2.5rem;
+}
+
+section#skills .skills .certifications {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+section#skills .skills .certifications h3 {
+    font-family: "Inter";
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+section#skills .skills .certifications ul {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+section#skills .skills .certifications ul li {
+    padding: 16px 24px;
+    border-radius: 48px;
+    border: 1px solid var(--black);
+    margin-left: 1rem;
+}
+
+section#skills .skills .certifications ul li:last-child() {
+    margin-left: 0;
+}
+
+/* En Travaux */
+section#zone-travaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#zone-travaux h2 {
+    font-size: 5vw;
 }
