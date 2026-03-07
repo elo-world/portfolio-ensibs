@@ -1,0 +1,38 @@
+#load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary);
+    z-index: 1000;
+    transform-origin: top;
+    animation: website-loaded 500ms var(--time-loading-1) forwards;
+    padding: 0 var(--window-border);
+}
+
+#load h1 {
+    font-family: Sora;
+    color: var(--white);
+    font-size: 3vw;
+}
+
+@keyframes website-loaded {
+    from {
+        transform: translateY(0);
+        border-radius: 0;
+    }
+    to {
+        transform: translateY(-100%);
+        border-radius: 0 0 50% 50%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    #load h1 {
+        font-size: 4vh;
+    }
+}

@@ -1,0 +1,166 @@
+header {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding-top: 64px;
+}
+
+header .presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--window-border);
+}
+
+header .presentation .image-presentation-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header .presentation .image-presentation-container .image-presentation {
+    position: relative;
+    width: 70%;
+    height: 90%;
+    border-radius: 80px;
+    overflow: hidden;
+    background-image: url("../../images/header_me.JPG");
+    background-size: cover;
+    background-position: 70% 50%;
+}
+
+header .presentation .image-presentation-container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: translateX(-60%);
+}
+
+header .presentation .text-presentation-container {
+    width: fit-content;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header .presentation .text-presentation-container .text-presentation .title {
+    overflow: hidden;
+}
+
+header .presentation .text-presentation-container .text-presentation .title h1 {
+    font-size: 5vw;
+    animation: load-header 500ms var(--time-loading-2) forwards;
+    transform: translateY(100%);
+}
+
+header .presentation .text-presentation-container .text-presentation .title h1 a {
+    color: var(--primary);
+}
+
+.lead {
+    overflow: hidden;
+}
+
+header .presentation .text-presentation-container .text-presentation .lead p {
+    max-width: 52ch;
+    line-height: 24px;
+    margin: 24px 0;
+    text-wrap: wrap;
+    animation: load-header 500ms var(--time-loading-2) forwards;
+    transform: translateY(100%);
+}
+
+header .presentation .text-presentation-container .text-presentation .lead .ctas {
+    display: inline-block;
+    animation: load-header 500ms var(--time-loading-2) forwards;
+    transform: translateY(100%);
+}
+
+header .presentation .text-presentation-container .text-presentation .lead .ctas button.primary-button {
+    margin-right: 16px;
+}
+
+header .last-name-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: load-header 500ms var(--time-loading-1) forwards;
+    transform: translateY(100%);
+}
+
+header .last-name-box .last-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+    animation: loop-last-name-left 15s var(--time-loading-1) infinite linear;
+}
+
+header .last-name-box h1 {
+    font-size:10vw;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+@keyframes load-header {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loop-last-name-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes loop-last-name-right {
+    from {
+        transform: translate(100%, -50%);
+    }
+    to {
+        transform: translate(0%, -50%);
+    }
+}
+
+@media screen and (max-width: 930px) {
+    header .presentation {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+    }
+    header .presentation .image-presentation-container .image-presentation {
+        width: 100%;
+    }
+    header .presentation .image-presentation-container img {
+        width: 130%;
+        min-height: 100%;
+        height: auto;
+        transform: translate(-60%, -10%);
+    }
+    header .presentation .text-presentation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    header .presentation .text-presentation-container .text-presentation .title h1 {
+        font-size: 5.5vh;
+    }
+    header .presentation .text-presentation-container .text-presentation .lead p {
+        max-width: auto;
+        line-height: 16px;
+        margin: 16px 0;
+    }
+}

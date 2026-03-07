@@ -1,0 +1,105 @@
+section {
+    min-height: 100vh;
+    padding: 0 var(--window-border);
+}
+
+section#zone-travaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#zone-travaux h3 {
+    font-size: 5vw;
+}
+
+section#projects {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+section#projects .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section#projects .title h3 {
+    text-wrap: nowrap;
+    font-size: 2vw;
+}
+
+section#projects .title p {
+    margin: 24px 0;
+}
+
+section#projects .title .ctas button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#projects .title .ctas button svg {
+    padding-right: 8px;
+}
+
+section#projects .projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#projects .projects ul {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-left: 6rem;
+}
+
+section#projects .projects ul .images-container {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transition: transform 100ms, opacity 250ms;
+    z-index: -1;
+}
+
+section#projects .projects ul:hover .images-container {
+    opacity: 1;
+}
+
+section#projects .projects ul .images-container .images {
+    position: relative;
+    width: 15vw;
+    height: 15vw;
+}
+
+section#projects .projects ul .images-container .images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 500ms;
+}
+
+section#projects .projects ul li:last-child {
+    margin-bottom: 0;
+}
+
+section#projects .projects ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 4vw;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    transition: 800ms;
+    padding: 2rem 0;
+}

@@ -1,0 +1,93 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--window-border);
+    animation: load-nav 1s var(--time-loading-3) forwards;
+    transform: translateY(-100%);
+    z-index: 100;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
+    padding: 8px 16px;
+    border-radius: 24px;
+}
+
+nav .logo h2 {
+    margin-left: 8px;
+}
+
+nav .navbar .burger-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
+    padding: 8px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+nav .navbar ul {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
+    padding: 8px;
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter";
+    height: 64px;
+    padding: 0 24px;
+}
+
+nav .navbar ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 500ms;
+}
+
+nav .navbar ul li a:hover::before {
+    opacity: 1;
+}
+
+nav .navbar ul li a:last-child() {
+    padding-right: 0;
+}
+
+@keyframes load-nav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
