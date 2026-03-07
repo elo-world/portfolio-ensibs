@@ -100,7 +100,7 @@ section#skills .title {
 
 section#skills .title h2 {
     text-wrap: nowrap;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 
 section#skills .skills {
@@ -181,6 +181,37 @@ section#skills .skills .certifications ul li {
 
 section#skills .skills .certifications ul li:last-child() {
     margin-left: 0;
+}
+
+/* About */
+section#about {
+    padding-top: 5rem;
+}
+
+section#about h2 {
+    font-size: 2.5vw;
+    margin-bottom: 4rem;
+}
+
+section#about .center-text {
+    display: flex;
+    justify-content: center;
+}
+
+section#about .center-text .text-container {
+    width: fit-content;
+}
+
+section#about .center-text .text-container h3 {
+    font-family: "Inter";
+    font-size: 2vw;
+    margin-bottom: 1rem;
+}
+
+
+section#about .center-text .text-container p {
+    max-width: 70ch;
+    margin-bottom: 3rem;
 }
 
 /* En Travaux */
