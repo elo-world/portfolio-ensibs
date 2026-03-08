@@ -1,4 +1,4 @@
-consultation_time.textContent = `Le site à été consulté le ${new Date().toLocaleString("fr-FR", {
+consultation_time.textContent = `Le site a été consulté le ${new Date().toLocaleString("fr-FR", {
     weekday: "long",
     year: "numeric",
     month: "long",
