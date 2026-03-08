@@ -72,7 +72,8 @@ header .presentation .text-presentation-container .text-presentation .lead p {
 }
 
 header .presentation .text-presentation-container .text-presentation .lead .ctas {
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 header .presentation .text-presentation-container .text-presentation .lead .ctas button.primary-button {

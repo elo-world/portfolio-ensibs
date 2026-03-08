@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem var(--window-border);
+    background: var(--primary);
+}
+
+footer p {
+    color: var(--white);
+}
+
+footer a {
+    font-family: "Inter";
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+footer a svg {
+    margin-left: 8px;
+}

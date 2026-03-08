@@ -61,7 +61,3 @@ nav .navbar ul li a::before {
 nav .navbar ul li a:hover::before {
     opacity: 1;
 }
-
-nav .navbar ul li a:last-child() {
-    padding-right: 0;
-}
