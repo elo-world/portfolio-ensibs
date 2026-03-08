@@ -201,11 +201,11 @@ section#skills .skills .certifications ul li {
     padding: 16px 24px;
     border-radius: 48px;
     border: 1px solid var(--black);
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 section#skills .skills .certifications ul li:last-child {
-    margin-left: 0;
+    margin-right: 0;
 }
 
 /* About */
